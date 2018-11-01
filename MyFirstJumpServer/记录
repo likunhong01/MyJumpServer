@@ -1,0 +1,32 @@
+-----------------------------------
+数据库设计：
+
+姓名              地址      权限
+chenronghua    192.68.1.10  root  123
+chenronghua    192.68.1.11  mysql
+zhaofan        192.68.1.10  root  123
+zhaofan         10.6.4.33   mysql
+zhaofan         10.6.4.33   web
+
+
+1、host表：
+id      ip      hostname    port
+
+2、user_profile
+username    password
+
+3、remote_user表：远程用户
+username  password  auth_type
+root        abc      ssh-password
+mysql                ssh-key
+mysql       abc      ssh-password
+
+
+4、host_group主机组表
+name
+
+5、auditlog日志表：
+date    堡垒机用户   cmd    ip   remote_user
+
+
+------------------------------------------------
